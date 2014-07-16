@@ -1,0 +1,4 @@
+jdbcUrl=jdbc:mysql://localhost/text_online
+jdbcUrl2=jdbc:mysql://127.0.0.1/text_online?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+user=root
+password=root
