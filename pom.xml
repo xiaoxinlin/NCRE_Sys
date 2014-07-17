@@ -38,6 +38,7 @@
 			<version>1.2_04</version>
 			<scope>provided</scope>
 		</dependency>
+
 		<!-- start: 配置jfinal -->
 		<dependency>
 			<groupId>com.jfinal</groupId>
@@ -45,7 +46,11 @@
 			<version>1.8</version>
 		</dependency>
 		<!-- end: 配置jfinal -->
-
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+			<version>2.8.3</version>
+		</dependency>
 		<!-- start: 配置log4j -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
@@ -74,6 +79,8 @@
 			<version>5.1.20</version>
 		</dependency>
 		<!-- end: mysql数据库插件 -->
+
+
 	</dependencies>
 	<build>
 		<sourceDirectory>${basedir}/src</sourceDirectory>
