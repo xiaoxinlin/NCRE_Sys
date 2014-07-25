@@ -2,6 +2,8 @@ package com.ncre.utils;
 
 
 
+import java.net.URL;
+
 import com.jfinal.config.Constants;
 import com.jfinal.config.Handlers;
 import com.jfinal.config.Interceptors;
@@ -12,6 +14,8 @@ import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.c3p0.C3p0Plugin;
 import com.jfinal.plugin.ehcache.EhCachePlugin;
 import com.ncre.controller.ItemsController;
+import com.ncre.controller.TktController;
+import com.ncre.controller.XztController;
 import com.ncre.model.AdminClass;
 import com.ncre.model.AnnouncementClass;
 import com.ncre.model.FileClass;
@@ -41,7 +45,7 @@ public class DemoConfig extends JFinalConfig{
 	@Override
 	public void configPlugin(Plugins arg0) {
 		//配置数据库
-		C3p0Plugin c3p0Plugin = new C3p0Plugin(getProperty("jdbcUrl"), getProperty("user"), getProperty("password"));
+		C3p0Plugin c3p0Plugin = new C3p0Plugin(getProperty("jdbcUrl2"), getProperty("user"), getProperty("password"));
 		arg0.add(c3p0Plugin);
 		ActiveRecordPlugin arp = new ActiveRecordPlugin(c3p0Plugin);
 		arp.setShowSql(true);
@@ -56,12 +60,18 @@ public class DemoConfig extends JFinalConfig{
 		arp.addMapping("xzt", XztClass.class);
 		
 		//配置二级缓存
-		arg0.add(new EhCachePlugin());
+		/**
+		 * ehcache.xml文件必须放在classpath路径下，不然系统会因为找不到文件使用默认的ehcache配置
+		 */
+		URL url = getClass().getResource("/ehcache.xml");  
+		arg0.add(new EhCachePlugin(url));
 	}
 
 	@Override
 	public void configRoute(Routes arg0) {
 		arg0.add("/items", ItemsController.class);
+		arg0.add("/tkt",TktController.class);
+		arg0.add("/xzt",XztController.class);
 	}
 
 }
