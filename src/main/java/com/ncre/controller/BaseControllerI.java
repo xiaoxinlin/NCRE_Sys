@@ -15,8 +15,7 @@ public interface BaseControllerI<T> {
 	public void delete();
 	
 	//更新对象
-	public void update(T t);
+	public void update();
 	
-	//查询对象
-	public void query(String sql);
+	
 }

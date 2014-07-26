@@ -19,17 +19,12 @@ public class BaseControllerImpl extends Controller implements
 		
 	}
 
-	public void query(String sql) {
-		// TODO Auto-generated method stub
-		
-	}
-
 	public void show() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void update(BaseControllerImpl t) {
+	public void update() {
 		// TODO Auto-generated method stub
 		
 	}

@@ -86,17 +86,12 @@ public class XztController extends Controller implements BaseControllerI<XztCont
 		
 	}
 
-	public void query(String sql) {
-		// TODO Auto-generated method stub
-		
-	}
-
 	public void show() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void update(XztController t) {
+	public void update() {
 		// TODO Auto-generated method stub
 		
 	}

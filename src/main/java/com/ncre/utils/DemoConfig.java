@@ -13,7 +13,9 @@ import com.jfinal.config.Routes;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.c3p0.C3p0Plugin;
 import com.jfinal.plugin.ehcache.EhCachePlugin;
+import com.ncre.controller.AdminController;
 import com.ncre.controller.ItemsController;
+import com.ncre.controller.QuestionController;
 import com.ncre.controller.TktController;
 import com.ncre.controller.XztController;
 import com.ncre.model.AdminClass;
@@ -72,6 +74,8 @@ public class DemoConfig extends JFinalConfig{
 		arg0.add("/items", ItemsController.class);
 		arg0.add("/tkt",TktController.class);
 		arg0.add("/xzt",XztController.class);
+		arg0.add("/admin",AdminController.class);
+		arg0.add("/question",QuestionController.class);
 	}
 
 }

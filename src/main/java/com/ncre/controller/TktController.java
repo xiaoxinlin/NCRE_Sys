@@ -64,17 +64,13 @@ public class TktController extends Controller implements
 		
 	}
 
-	public void query(String sql) {
-		// TODO Auto-generated method stub
-
-	}
 
 	public void show() {
 		
 
 	}
 
-	public void update(TktController t) {
+	public void update() {
 		// TODO Auto-generated method stub
 
 	}

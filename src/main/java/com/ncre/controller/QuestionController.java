@@ -3,39 +3,58 @@ package com.ncre.controller;
 import java.util.List;
 
 import com.jfinal.core.Controller;
+import com.ncre.model.QuestionClass;
 import com.ncre.model.TktClass;
 
-public class QuestionController extends Controller implements BaseControllerI<QuestionController>{
+public class QuestionController extends Controller implements
+		BaseControllerI<QuestionController> {
 
 	public void add() {
-		// TODO Auto-generated method stub
-		
+
+		QuestionClass questionClass = getModel(QuestionClass.class);
+
+		questionClass.set("is_legal", false).save();
+
+		redirect("/question/index");
 	}
 
 	public void delete() {
-		// TODO Auto-generated method stub
-		
+		String id = getPara("id");
+
+		QuestionClass.dao.deleteById(id.toString());
+
+		redirect("/question/index");
 	}
 
 	public void index() {
-		// TODO Auto-generated method stub
-		
-	}
+		List<QuestionClass> questionList = QuestionClass.dao
+				.find("select * from `question`");
 
-	public void query(String sql) {
-		// TODO Auto-generated method stub
-		
+		renderJson(questionList);
+
+		return;
 	}
 
 	public void show() {
-		// TODO Auto-generated method stub
-		
+		String id = getPara("id");
+
+		QuestionClass questionClass = QuestionClass.dao.findById(id.toString());
+
+		renderJson(questionClass);
+
+		return;
 	}
 
-	public void update(QuestionController t) {
-		// TODO Auto-generated method stub
-		
+	public void update() {
+		QuestionClass questionClass = getModel(QuestionClass.class);
+
+		questionClass.dao.findById(questionClass.get("id").toString())
+				.set("title", questionClass.get("title"))
+				.set("answer",questionClass.get("answer"))
+				.set("is_legal", questionClass.get("is_legal"))
+				.update();
+
+		redirect("/question/index");
 	}
-	
 
 }

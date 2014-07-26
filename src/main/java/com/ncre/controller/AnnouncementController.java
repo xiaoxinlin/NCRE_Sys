@@ -32,7 +32,7 @@ public class AnnouncementController extends Controller implements BaseController
 		
 	}
 
-	public void update(AnnouncementController t) {
+	public void update() {
 		// TODO Auto-generated method stub
 		
 	}

@@ -51,10 +51,6 @@ public class ItemsController extends Controller implements BaseControllerI<Items
 		renderText("invoke delete!!");
 	}
 
-	public void query(String sql) {
-		// TODO Auto-generated method stub
-		
-	}
 
 	public void show() {
 		String type = getPara("type");
@@ -70,7 +66,7 @@ public class ItemsController extends Controller implements BaseControllerI<Items
 		return;
 	}
 
-	public void update(ItemsController t) {
+	public void update() {
 		// TODO Auto-generated method stub
 		
 	}
