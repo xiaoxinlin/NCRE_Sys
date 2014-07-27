@@ -8,6 +8,7 @@ import com.ncre.utils.MD5Utils;
 
 public class AdminController extends Controller implements
 		BaseControllerI<AdminController> {
+	
 	//增加一个对象
 	public void add() {
 		AdminClass adminClass = getModel(AdminClass.class);

@@ -27,6 +27,10 @@ public class QuestionController extends Controller implements
 	}
 
 	public void index() {
+		String pageNow = getPara("page");
+		if("".equals(pageNow) || pageNow == null){
+			pageNow = "1";
+		}
 		List<QuestionClass> questionList = QuestionClass.dao
 				.find("select * from `question`");
 

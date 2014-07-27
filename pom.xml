@@ -86,6 +86,13 @@
 			<version>2.3.20</version>
 		</dependency>
 		<!-- end: freemarker框架 -->
+		<!-- start: cos框架 (File上传框架)-->
+		<dependency>
+			<groupId>com.jfinal</groupId>
+			<artifactId>cos</artifactId>
+			<version>26Dec2008</version>
+		</dependency>
+		<!-- end: cos框架 -->
 	</dependencies>
 	<build>
 		<sourceDirectory>${basedir}/src</sourceDirectory>
