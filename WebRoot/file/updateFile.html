@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html >
+	<head>
+		<title>uploadFile.html</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+		<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+	</head>
+
+	<body>
+		<form action='../file/update' method='post' enctype="multipart/form-data">
+			ID:
+			<input type='text' name='fileClass.id'>
+			<br />
+			Title:
+			<input type='text' name='fileClass.title'>
+			<br />
+			Type:
+			<select name='fileClass.type'>
+				<option value='office'>
+					Office
+				</option>
+				<option value='access'>
+					Access
+				</option>
+			</select>
+			<br />
+			File:
+			<input type='file' name='file' />
+			<br />
+			<input type='submit' />
+		</form>
+	</body>
+</html>
