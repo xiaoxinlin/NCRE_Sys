@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
 	<head>
 		<base href="<%=basePath%>">    
-		<title>公告管理首页</title>
+		<title>管理员管理首页</title>
 		<meta http-equiv="pragma" content="no-cache">
 		<meta http-equiv="cache-control" content="no-cache">
 		<meta http-equiv="expires" content="0">    
@@ -17,6 +17,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		
 		<link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
 		<link rel="stylesheet" href="css/b-anno.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/b-admin.css" type="text/css" media="screen" />
 		
 		<script src="js/jquery-1.5.2.min.js" type="text/javascript"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -50,7 +51,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<p>江彩霞</p>
 			</div>
 			<div class="breadcrumbs_container">
-				<article class="breadcrumbs"><a class="current">公告管理</a> <div class="breadcrumb_divider"></div> <%--<a class="current">Dashboard</a>--%></article>
+				<article class="breadcrumbs"><a class="current">管理员管理</a> <div class="breadcrumb_divider"></div> <%--<a class="current">Dashboard</a>--%></article>
 			</div>
 		</section><!-- end of secondary bar -->
 		
@@ -124,101 +125,100 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<table class="table table-hover">
 	              <thead>
 	                <tr>
-	                  <th>公告标题</th>
-	                  <th>上传时间</th>
-	                  <th>附件</th>
+	                  <th>名称</th>
+	                  <th>密码</th>
+	                  <th>权限</th>
+	                  <th>创建时间</th>
 	                  <th>操作</th>
 	                </tr>
 	              </thead>
 	              <tbody>
 	                <tr>
-	                  <td><a href="announcement-details.jsp" target="_blank">中山大学南方学院什么院长什么去哪里视察中山大学南方学院什么院长什么去哪里视察</a></td>
+	                  <td>林晓鑫</td>
+	                  <td>123456</td>
+	                  <td>admin</td>
 	                  <td>2014-08-07</td>
-	                  <td>111222333111222333111222333111222333.excel</td>
 	                  <td>
-	                  	<a name="delete-anno"  class="btn" href="">删除</button>
-	                  	<a name="update-anno"  class="btn" href="b-anno-update.jsp">编辑</button>
+	                  	<a name="delete-admin"  class="btn" href="">删除</button>
+	                  	<a name="update-admin"  class="btn" href="b-admin-update.jsp">编辑</button>
 	                  </td>
 	                </tr>
 	                <tr>
-	                  <td><a href="announcement-details.jsp" target="_blank">中山大学南方学院什么院长什么去哪里视察</a></td>
-	                  <td>Thornton</td>
-	                  <td>@fat</td>
-	                  <td>
-	                  	<a name="delete-anno"  class="btn" href="">删除</button>
-	                  	<a name="update-anno"  class="btn" href="b-anno-update.jsp">编辑</button>
-	                  </td>
-	                </tr>
-	                <tr>
-	                  <td><a href="">中山大学南方学院什么院长什么去哪里视察</a></td>
-	                  <td>Larry the Bird</td>
-	                  <td>@twitter</td>
-	                 <td>
-	                  	<a name="delete-anno"  class="btn" href="">删除</button>
-	                  	<a name="update-anno"  class="btn" href="b-anno-update.jsp">编辑</button>
-	                  </td>
-	                </tr>
-	                <tr>
-	                  <td><a href="">中山大学南方学院什么院长什么去哪里视察</a></td>
-	                  <td>Larry the Bird</td>
-	                  <td>@twitter</td>
-	                  <td>
-	                  	<a name="delete-anno"  class="btn" href="">删除</button>
-	                  	<a name="update-anno"  class="btn" href="b-anno-update.jsp">编辑</button>
-	                  </td>
-	                </tr>
-	                <tr>
-	                  <td><a href="">中山大学南方学院什么院长什么去哪里视察</a></td>
-	                  <td>Larry the Bird</td>
-	                  <td>@twitter</td>
-	                  <td>
-	                  	<a name="delete-anno"  class="btn" href="">删除</button>
-	                  	<a name="update-anno"  class="btn" href="b-anno-update.jsp">编辑</button>
-	                  </td>
-	                </tr>
-	                <tr>
-	                  <td><a href="">中山大学南方学院什么院长什么去哪里视察</a></td>
-	                  <td>Larry the Bird</td>
-	                  <td>@twitter</td>
-	                  <td>
-	                  	<a name="delete-anno"  class="btn" href="">删除</button>
-	                  	<a name="update-anno"  class="btn" href="b-anno-update.jsp">编辑</button>
-	                  </td>
-	                </tr>
-	                <tr>
-	                  <td><a href="">中山大学南方学院什么院长什么去哪里视察</a></td>
-	                  <td>Larry the Bird</td>
-	                  <td>@twitter</td>
-	                  <td>
-	                  	<a name="delete-anno"  class="btn" href="">删除</button>
-	                  	<a name="update-anno"  class="btn" href="b-anno-update.jsp">编辑</button>
-	                  </td>
-	                </tr>
-	                <tr>
-	                  <td><a href="">中山大学南方学院什么院长什么去哪里视察中山大学南方学院什么院长什么去哪里视察</a></td>
+	                  <td>江彩霞</td>
+	                  <td>123456</td>
+	                  <td>admin</td>
 	                  <td>2014-08-07</td>
-	                  <td>111222333111222333111222333111222333.excel</td>
 	                  <td>
-	                  	<a name="delete-anno"  class="btn" href="">删除</button>
-	                  	<a name="update-anno"  class="btn" href="b-anno-update.jsp">编辑</button>
+	                  	<a name="delete-admin"  class="btn" href="">删除</button>
+	                  	<a name="update-admin"  class="btn" href="b-admin-update.jsp">编辑</button>
 	                  </td>
 	                </tr>
 	                <tr>
-	                  <td><a href="">中山大学南方学院什么院长什么去哪里视察中山大学南方学院什么院长什么去哪里视察</a></td>
+	                  <td>坤坤</td>
+	                  <td>123456</td>
+	                  <td>admin</td>
 	                  <td>2014-08-07</td>
-	                  <td>111222333111222333111222333111222333.excel</td>
 	                  <td>
-	                  	<a name="delete-anno"  class="btn" href="">删除</button>
-	                  	<a name="update-anno"  class="btn" href="b-anno-update.jsp">编辑</button>
+	                  	<a name="delete-admin"  class="btn" href="">删除</button>
+	                  	<a name="update-admin"  class="btn" href="b-admin-update.jsp">编辑</button>
 	                  </td>
 	                </tr>
-	                
+	                <tr>
+	                  <td>荷叶</td>
+	                  <td>123456</td>
+	                  <td>admin</td>
+	                  <td>2014-08-07</td>
+	                  <td>
+	                  	<a name="delete-admin"  class="btn" href="">删除</button>
+	                  	<a name="update-admin"  class="btn" href="b-admin-update.jsp">编辑</button>
+	                  </td>
+	                </tr>
+	                <tr>
+	                  <td>锋锋</td>
+	                  <td>123456</td>
+	                  <td>admin</td>
+	                  <td>2014-08-07</td>
+	                  <td>
+	                  	<a name="delete-admin"  class="btn" href="">删除</button>
+	                  	<a name="update-admin"  class="btn" href="b-admin-update.jsp">编辑</button>
+	                  </td>
+	                </tr>
+	                <tr>
+	                  <td>江彩霞</td>
+	                  <td>123456</td>
+	                  <td>admin</td>
+	                  <td>2014-08-07</td>
+	                  <td>
+	                  	<a name="delete-admin"  class="btn" href="">删除</button>
+	                  	<a name="update-admin"  class="btn" href="b-admin-update.jsp">编辑</button>
+	                  </td>
+	                </tr>
+	                <tr>
+	                  <td>江彩霞</td>
+	                  <td>123456</td>
+	                  <td>admin</td>
+	                  <td>2014-08-07</td>
+	                  <td>
+	                  	<a name="delete-admin"  class="btn" href="">删除</button>
+	                  	<a name="update-admin"  class="btn" href="b-admin-update.jsp">编辑</button>
+	                  </td>
+	                </tr>
+	                <tr>
+	                  <td>江彩霞</td>
+	                  <td>123456</td>
+	                  <td>admin</td>
+	                  <td>2014-08-07</td>
+	                  <td>
+	                  	<a name="delete-admin"  class="btn" href="">删除</button>
+	                  	<a name="update-admin"  class="btn" href="b-admin-update.jsp">编辑</button>
+	                  </td>
+	                </tr>	                
 	              </tbody>
 	            </table>
 	            <div class="b-s-page">
 					<div class="container-fluid">
 						<div class="row-fluid">
-							<div class="span2 pull-left"><a name="add-anno"  class="btn" href="b-anno-add.jsp">添加公告</a></div>
+							<div class="span2 pull-left"><a name="add-admin"  class="btn" href="b-admin-add.jsp">添加管理员</a></div>
 							<div class="span8">								
 								<ul class="pager">
 								  <li><a href="#">上一页</a></li>

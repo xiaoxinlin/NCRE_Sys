@@ -42,7 +42,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	                    <section class="span10 offset1">
 	                    	<div class="login-bg">
 	                    		<div class="login-form">
-		                    		<form class="form-horizontal" action="">
+		                    		<form class="form-horizontal" action="b-superadmin-anno.jsp">
 							            <div class="control-group">
 							              <label class="control-label" for="userid">账号：</label>
 							              <div class="controls">

@@ -169,7 +169,7 @@ aside#sidebar {
 	width: 23%;
 	background: #E0E0E3 url(../images/backImg/sidebar.png) repeat;
 	float: left;
-	min-height: 500px;
+	min-height: 585px;
 	margin-top: -4px;
 	box-shadow: 5px 5px 5px #D6D5D5;
 }
@@ -289,3 +289,38 @@ section#main {
 	background-color: #b2b2b2;
 }
 
+
+/*b-anno-add.jsp*/
+
+.add-anno-module {
+	width: 95%;
+	margin: 10% 3% 0 3%;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	
+}
+.add-anno-module .add-anno-title {
+	width: 99%;
+}
+.add-anno-module .add-anno-cke {
+	border:1px solid #CFCFCF;
+}
+
+
+/*b-anno-update.jsp*/
+
+.update-anno-module {
+	width: 95%;
+	margin: 10% 3% 0 3%;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	
+}
+.update-anno-module .update-anno-title {
+	width: 99%;
+}
+.update-anno-module .update-anno-cke {
+	border:1px solid #CFCFCF;
+}
