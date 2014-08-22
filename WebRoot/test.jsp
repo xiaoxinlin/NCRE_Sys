@@ -25,7 +25,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    <link href="css/main.css" type="text/css" rel="stylesheet" />
 	    <link href="css/test.css" type="text/css" rel="stylesheet" />
 
-	    <script type="text/javascript" src="js/jquery.min.js"></script>
+	    <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
 	    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 	    <script type="text/javascript" src="js/main.js"></script>
 	      
@@ -78,12 +78,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	        </div>
 	        <nav id="menu">
 	            <ul class="clearfix">
-	                <li><a href="index.jsp" target="_blank">首页</a></li>
-	                <li><a href="announcement.jsp" target="_blank">公告信息</a></li>
+	                <li><a href="index.jsp" >首页</a></li>
+	                <li><a href="announcement.jsp" >公告信息</a></li>
 	                <li><a href="test.jsp" class="current">每日一练</a></li>
-	                <li><a href="exam.jsp" target="_blank">在线测试</a></li>
-	                <li><a href="download.jsp" target="_blank">资料下载</a></li>
-	                <li><a href="question.jsp" target="_blank">常见问题</a></li>
+	                <li><a href="exam.jsp" >在线测试</a></li>
+	                <li><a href="download.jsp" >资料下载</a></li>
+	                <li><a href="question.jsp" >常见问题</a></li>
 	            </ul>
 	        </nav>
 	    </div>

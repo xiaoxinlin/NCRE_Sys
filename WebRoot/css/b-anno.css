@@ -18,7 +18,7 @@ html, body {
 }
 
 .spacer {
-	height: 20px;
+	height: 15px;
 }
 
 a:link, a:visited {
@@ -294,11 +294,10 @@ section#main {
 
 .add-anno-module {
 	width: 95%;
-	margin: 10% 3% 0 3%;
+	margin: 3% 0% 0 5%;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	
 }
 .add-anno-module .add-anno-title {
 	width: 99%;
@@ -312,11 +311,10 @@ section#main {
 
 .update-anno-module {
 	width: 95%;
-	margin: 10% 3% 0 3%;
+	margin: 3% 0% 0 5%;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	
 }
 .update-anno-module .update-anno-title {
 	width: 99%;

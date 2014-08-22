@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
 	<head>
 		<base href="<%=basePath%>">    
-		<title>更新管理员</title>
+		<title>添加常见问题</title>
 		<meta http-equiv="pragma" content="no-cache">
 		<meta http-equiv="cache-control" content="no-cache">
 		<meta http-equiv="expires" content="0">    
@@ -17,7 +17,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		
 		<link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
 		<link rel="stylesheet" href="css/b-anno.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="css/b-admin.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/b-question.css" type="text/css" media="screen" />
 		
 		
 		<script src="js/jquery-2.1.0.min.js" type="text/javascript"></script>
@@ -52,7 +52,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<p>江彩霞</p>
 			</div>
 			<div class="breadcrumbs_container">
-				<article class="breadcrumbs"><a href="b-admin.jsp">管理员管理</a> <div class="breadcrumb_divider"></div> <a class="current">更新管理员</a></article>
+				<article class="breadcrumbs"><a href="b-question.jsp">常见问题管理</a> <div class="breadcrumb_divider"></div> <a class="current">添加常见问题</a></article>
 			</div>
 		</section><!-- end of secondary bar -->
 		
@@ -122,26 +122,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		
 		<section id="main" class="column">
 			<div class="spacer"></div>
-			<article class="update-admin-module">
-				<form class="update-admin-form form-horizontal" method="post" action="b-admin.jsp">
+			<article class="add-question-module">
+				<form class="add-question-form form-horizontal" method="post" action="b-question.jsp">
 		            <div class="control-group">
-		              <label class="control-label" for=""><h4>名称：</h4></label>
+		              <label class="control-label" for=""><h4>常见问题：</h4></label>
 		              <div class="controls">
-		              	<input type="text" name="name"/>
+		              	<textarea rows="8" cols="50" name="question-title"></textarea>
 		              </div>
 		            </div>
 		            <div class="control-group">
-		              <label class="control-label" for=""><h4>密码：</h4></label>
+		              <label class="control-label" for=""><h4>回答：</h4></label>
 		              <div class="controls">
-		              	<input type="password" name="password"/>
+		              	<textarea rows="8" cols="50" name="question-answer"></textarea>
 		              </div>
 		            </div>
 		            <div class="control-group">
 		              <div class="controls">
-		              	<input type="hidden" name="authority" value="admin"/>
-		                <button type="submit" class="btn" name="admin-update" id="admin-update">保存</button>
-		                <button type="reset" class="btn" name="admin-update-reset" id="admin-update-reset">重填</button>
-		            	<a href="b-admin.jsp"  class="btn" name="admin-cancel" id="admin-cancel">取消</a>
+		                <button type="submit" class="btn" name="question-submit" id="question-submit">保存</button>
+		                <button type="reset" class="btn" name="question-update-reset" id="question-update-reset">重填</button>
+		            	<a href="b-question.jsp"  class="btn" name="question-cancel" id="question-cancel">取消</a>
 		              </div>
 		            </div>
 		            

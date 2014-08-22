@@ -25,7 +25,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    <link href="css/main.css" type="text/css" rel="stylesheet" />
 	    <link href="css/question-details.css" type="text/css" rel="stylesheet" />
 
-	    <script type="text/javascript" src="js/jquery.min.js"></script>
+	    <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
 	    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 	    <script type="text/javascript" src="js/main.js"></script>
 	      
@@ -109,7 +109,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	                            <article class="blog-post span8">
 	                                <div class="question-de-shadow">
 	                                	<div class="question-de-block">
-	                                   		<div class="question-de-title"><h3>今年上半年计算机国家二级考试成绩什么时候出来？</h3></div>
+	                                   		<div class="question-de-title">
+	                                   			<h4><p>今年上半年计算机国家二级考试成绩什么时候出来？今年上半年计算机国家二级考试成绩什么时候出来？今年上半年计算机国家二级考试成绩什么时候出来？今年上半年计算机国家二级考试成绩什么时候出来？</p></h4>
+	                                   		</div>
 	                                   		<div class="question-de-text">
 	                                   			<p>得到五月下旬呢，全国计算机等级考试成绩在每次考试结束后3个月内提供成绩和等级证书查询。一般情况下，考生可以在考试结束后2个月左右得到成绩，视地区不一样而有区别。  
 

@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
 	<head>
 		<base href="<%=basePath%>">    
-		<title>更新管理员</title>
+		<title>添加填空题</title>
 		<meta http-equiv="pragma" content="no-cache">
 		<meta http-equiv="cache-control" content="no-cache">
 		<meta http-equiv="expires" content="0">    
@@ -17,12 +17,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		
 		<link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
 		<link rel="stylesheet" href="css/b-anno.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="css/b-admin.css" type="text/css" media="screen" />
-		
+		<link rel="stylesheet" href="css/b-tkt.css" type="text/css" media="screen" />
+		<link href="css/cke.css" rel="stylesheet">
 		
 		<script src="js/jquery-2.1.0.min.js" type="text/javascript"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/jquery.equalHeight.js"></script>
+		<script src="ckeditor/ckeditor.js"></script>
 		
 		<script type="text/javascript">
 		    $(function(){
@@ -52,7 +53,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<p>江彩霞</p>
 			</div>
 			<div class="breadcrumbs_container">
-				<article class="breadcrumbs"><a href="b-admin.jsp">管理员管理</a> <div class="breadcrumb_divider"></div> <a class="current">更新管理员</a></article>
+				<article class="breadcrumbs"><a href="b-tkt.jsp">填空题管理</a> <div class="breadcrumb_divider"></div> <a class="current">添加填空题</a></article>
 			</div>
 		</section><!-- end of secondary bar -->
 		
@@ -122,33 +123,75 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		
 		<section id="main" class="column">
 			<div class="spacer"></div>
-			<article class="update-admin-module">
-				<form class="update-admin-form form-horizontal" method="post" action="b-admin.jsp">
+			<article class="add-tkt-module">
+				<form class="add-tkt-form" method="post" action="b-tkt.jsp">
 		            <div class="control-group">
-		              <label class="control-label" for=""><h4>名称：</h4></label>
-		              <div class="controls">
-		              	<input type="text" name="name"/>
+		              <label class="control-label" for=""><h4>填空题题目：</h4></label>
+		              <div class="controls add-tkt-cke">
+		                <textarea name="tkt-add-title" style="height: 500px" >
+							请点击这里添加公告内容......
+						</textarea>
 		              </div>
 		            </div>
 		            <div class="control-group">
-		              <label class="control-label" for=""><h4>密码：</h4></label>
-		              <div class="controls">
-		              	<input type="password" name="password"/>
+		              <label class="control-label" for=""><h4>答案：</h4></label>
+		              <div class="controls add-tkt-cke">
+		                <textarea name="tkt-add-answer" style="height: 500px" >
+							请点击这里添加公告内容......
+						</textarea>
 		              </div>
 		            </div>
 		            <div class="control-group">
+		              <label class="control-label" for=""><h4>题型：</h4></label>
 		              <div class="controls">
-		              	<input type="hidden" name="authority" value="admin"/>
-		                <button type="submit" class="btn" name="admin-update" id="admin-update">保存</button>
-		                <button type="reset" class="btn" name="admin-update-reset" id="admin-update-reset">重填</button>
-		            	<a href="b-admin.jsp"  class="btn" name="admin-cancel" id="admin-cancel">取消</a>
+		                <select name="tkt-type">
+		                	<option value="tkt">填空题</option>
+		                	<option value="dt">大题</option>
+		                </select>
 		              </div>
 		            </div>
-		            
+		            <div class="control-group">
+		              <label class="control-label" for=""><h4>类型：</h4></label>
+		              <div class="controls">
+		                <select name="tkt-sub_type">					<%--   22种类型	--%>
+		                	<option value="计算机基础及WPS Office应用">计算机基础及WPS Office应用</option>
+		                	<option value="计算机基础及MS Office应用">计算机基础及MS Office应用</option>
+		                	<option value="计算机基础及Photoshop应用">计算机基础及Photoshop应用</option>
+		                	<option value="C语言程序设计">C语言程序设计</option>
+		                	<option value="VB语言程序设计">VB语言程序设计</option>
+		                	<option value="VFP数据库程序设计">VFP数据库程序设计</option>
+		                	<option value="Java语言程序设计">Java语言程序设计</option>
+		                	<option value="Access语言程序设">Access语言程序设</option>
+		                	<option value="C++语言程序设计">C++语言程序设计</option>
+		                	<option value="MySQL数据库程序设计">MySQL数据库程序设计</option>
+		                	
+		                	<option value="Web程序设计">Web程序设计</option>
+		                	<option value="MS Office高级应用">MS Office高级应用</option>
+		                	<option value="网络技术">网络技术</option>
+		                	<option value="数据库技术">数据库技术</option>
+		                	<option value="软件测试技术">软件测试技术</option>
+		                	<option value="信息安全技术">信息安全技术</option>
+		                	<option value="嵌入式系统开发技术">嵌入式系统开发技术</option>
+		                	<option value="网络工程师">网络工程师</option>
+		                	<option value="数据库工程师">数据库工程师</option>
+		                	<option value="软件测试工程师">软件测试工程师</option>
+		                	
+		                	<option value="信息安全工程师">信息安全工程师</option>
+		                	<option value="嵌入式系统开发工程师">嵌入式系统开发工程师</option>
+		                </select>
+		              </div>
+		            </div>
+		            <button type="submit" class="btn" name="tkt-submit " id="tkt-submit">保存</button>
+		            <button type="reset" class="btn" name="tkt-add-reset" id="tkt-add-reset">重填</button>
+		            <a href="b-tkt.jsp"  class="btn" name="tkt-cancel" id="tkt-cancel">取消</a>
 		          </form>
 			</article>
 		</section>
-	
+		
+		<script>
+			CKEDITOR.inline( 'tkt-add-title' );
+			CKEDITOR.inline( 'tkt-add-answer' );
+		</script>
 	
 	</body>
 </html>

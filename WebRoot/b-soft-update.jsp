@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
 	<head>
 		<base href="<%=basePath%>">    
-		<title>更新管理员</title>
+		<title>更新相关软件名</title>
 		<meta http-equiv="pragma" content="no-cache">
 		<meta http-equiv="cache-control" content="no-cache">
 		<meta http-equiv="expires" content="0">    
@@ -17,8 +17,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		
 		<link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
 		<link rel="stylesheet" href="css/b-anno.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="css/b-admin.css" type="text/css" media="screen" />
-		
+		<link rel="stylesheet" href="css/b-soft.css" type="text/css" media="screen" />
 		
 		<script src="js/jquery-2.1.0.min.js" type="text/javascript"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -52,7 +51,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<p>江彩霞</p>
 			</div>
 			<div class="breadcrumbs_container">
-				<article class="breadcrumbs"><a href="b-admin.jsp">管理员管理</a> <div class="breadcrumb_divider"></div> <a class="current">更新管理员</a></article>
+				<article class="breadcrumbs"><a href="b-soft.jsp">相关软件管理</a> <div class="breadcrumb_divider"></div> <a class="current">更新相关软件名</a></article>
 			</div>
 		</section><!-- end of secondary bar -->
 		
@@ -122,29 +121,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		
 		<section id="main" class="column">
 			<div class="spacer"></div>
-			<article class="update-admin-module">
-				<form class="update-admin-form form-horizontal" method="post" action="b-admin.jsp">
+			<article class="update-soft-module">
+				<form class="update-soft-form form-horizontal" method="post" action="b-soft.jsp">
 		            <div class="control-group">
-		              <label class="control-label" for=""><h4>名称：</h4></label>
+		              <label class="control-label" for=""><h4>原文件名：</h4></label>
 		              <div class="controls">
-		              	<input type="text" name="name"/>
+		              	<span name="old-soft-appendix">哈哈哈.zip</span>
 		              </div>
 		            </div>
 		            <div class="control-group">
-		              <label class="control-label" for=""><h4>密码：</h4></label>
+		              <label class="control-label" for=""><h4>重命名：</h4></label>
 		              <div class="controls">
-		              	<input type="password" name="password"/>
+		              	<input type="text" name="new-soft-appendix"/>
 		              </div>
 		            </div>
 		            <div class="control-group">
 		              <div class="controls">
-		              	<input type="hidden" name="authority" value="admin"/>
-		                <button type="submit" class="btn" name="admin-update" id="admin-update">保存</button>
-		                <button type="reset" class="btn" name="admin-update-reset" id="admin-update-reset">重填</button>
-		            	<a href="b-admin.jsp"  class="btn" name="admin-cancel" id="admin-cancel">取消</a>
+		                <button type="submit" class="btn" name="soft-update" id="soft-update">保存</button>
+		            	<a href="b-soft.jsp"  class="btn" name="soft-cancel" id="soft-cancel">取消</a>
 		              </div>
 		            </div>
-		            
 		          </form>
 			</article>
 		</section>

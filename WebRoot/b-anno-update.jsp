@@ -19,7 +19,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<link rel="stylesheet" href="css/b-anno.css" type="text/css" media="screen" />
 		<link href="css/cke.css" rel="stylesheet">
 		
-		<script src="js/jquery-1.5.2.min.js" type="text/javascript"></script>
+		<script src="js/jquery-2.1.0.min.js" type="text/javascript"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/jquery.equalHeight.js"></script>
 		<script src="ckeditor/ckeditor.js"></script>
@@ -64,35 +64,35 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="accordion" id="b-anno-accordion">
 				<div class="accordion-group">
 				   <div class="accordion-heading">
-					    <a class="accordion-toggle" data-toggle="collapse" data-parent="#b-anno-accordion" href="b-superadmin-anno.jsp">
+					    <a class="accordion-toggle" href="b-superadmin-anno.jsp">
 					    	  公告管理<span class="badge pull-right ">＞</span>
 					    </a>
 				    </div>
 				</div>
 				<div class="accordion-group">
 				   <div class="accordion-heading">
-					    <a class="accordion-toggle" data-toggle="collapse" data-parent="#b-anno-accordion" href="b-xzt.jsp">
+					    <a class="accordion-toggle" href="b-xzt.jsp">
 					    	  选择题管理<span class="badge pull-right ">＞</span>
 					    </a>
 				    </div>
 				</div>
 				<div class="accordion-group">
 				   <div class="accordion-heading">
-					    <a class="accordion-toggle" data-toggle="collapse" data-parent="#b-anno-accordion" href="b-tkt.jsp">
+					    <a class="accordion-toggle" href="b-tkt.jsp">
 					    	  填空题管理<span class="badge pull-right ">＞</span>
 					    </a>
 				    </div>
 				</div>
 				<div class="accordion-group">
 				   <div class="accordion-heading">
-					    <a class="accordion-toggle" data-toggle="collapse" data-parent="#b-anno-accordion" href="b-exam.jsp">
+					    <a class="accordion-toggle" href="b-exam.jsp">
 					    	  考试资料管理<span class="badge pull-right ">＞</span>
 					    </a>
 				    </div>
 				</div>
 				<div class="accordion-group">
 				   <div class="accordion-heading">
-					    <a class="accordion-toggle" data-toggle="collapse" data-parent="#b-anno-accordion" href="b-soft.jsp">
+					    <a class="accordion-toggle" href="b-soft.jsp">
 					    	  相关软件管理<span class="badge pull-right ">＞</span>
 					    </a>
 				    </div>
@@ -100,14 +100,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 				<div class="accordion-group">
 				    <div class="accordion-heading">
-					    <a class="accordion-toggle" data-toggle="collapse" data-parent="#b-anno-accordion" href="b-question.jsp">
+					    <a class="accordion-toggle" href="b-question.jsp">
 					      	常见问题管理<span class="badge pull-right">＞</span>
 					    </a>
 				    </div>
 				</div>
 				<div class="accordion-group">
 				    <div class="accordion-heading">
-					    <a class="accordion-toggle" data-toggle="collapse" data-parent="#b-anno-accordion" href="b-admin.jsp">
+					    <a class="accordion-toggle" href="b-admin.jsp">
 					      	管理员管理<span class="badge pull-right">＞</span>
 					    </a>
 				    </div>
@@ -133,7 +133,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		            <div class="control-group">
 		              <label class="control-label" for=""><h4>内容：</h4></label>
 		              <div class="controls update-anno-cke">
-		                <textarea name="article-body" style="height: 500px" >
+		                <textarea name="anno-update-context" style="height: 500px" >
 							请点击这里添加公告内容......
 						</textarea>
 		              </div>
@@ -148,15 +148,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		              	</div>
 		              </div>
 		            </div>
-		            <button type="submit" class="btn">保存</button>
-		            <button type="reset" class="btn">重填</button>
-		            <a href="b-superadmin-anno.jsp"  class="btn" name="cancel" id="cancel">取消</a>
+		            <button type="submit" class="btn" name="anno-update">保存</button>
+		            <button type="reset" class="btn" name="anno-update-reset" id="anno-update-reset">重填</button>
+		            <a href="b-superadmin-anno.jsp"  class="btn" name="anno-cancel" id="anno-cancel">取消</a>
 		          </form>
 			</article>
 		</section>
 		
 		<script>
-			CKEDITOR.inline( 'article-body' );
+			CKEDITOR.inline( 'anno-update-context' );
 		</script>
 	
 	</body>
